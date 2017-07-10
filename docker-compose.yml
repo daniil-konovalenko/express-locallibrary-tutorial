@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  web:
+    restart: always
+    build: .
+    environment:
+      - NODE_ENV=production
+    expose:
+      - "80"
+    command: npm start
+    ports:
+      - "80:3000"
